@@ -5,17 +5,17 @@ Investigate software coupling using modern DNN methods and compare with traditio
 
 ## Project Structure
 /SoftwareCouplingAnalysis_v01
-├── data/
-│ ├── argouml/
-│ │ ├── argouml.jar
-│ │ ├── argouml_commit_log.txt
-│ │ ├── argouml_trace.txt
-│ │ ├── argouml_semantic.csv
-│ ├── jhotdraw/
-│ │ ├── jhotdraw.jar
-│ │ ├── jhotdraw_commit_log.txt
-│ │ ├── jhotdraw_trace.txt
-│ │ ├── jhotdraw_semantic.csv
+data/
+    argouml/
+    argouml.jar
+    argouml_commit_log.txt
+     argouml_trace.txt
+    argouml_semantic.csv
+    jhotdraw/
+    jhotdraw.jar
+    jhotdraw_commit_log.txt
+     jhotdraw_trace.txt
+    jhotdraw_semantic.csv
 │ ├── jedit/
 │ │ ├── jedit.jar
 │ │ ├── jedit_commit_log.txt
