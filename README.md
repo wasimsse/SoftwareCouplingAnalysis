@@ -7,14 +7,36 @@ Investigate software coupling using modern DNN methods and compare with traditio
 /SoftwareCouplingAnalysis_v01
 ├── data/
 │ ├── argouml/
+│ │ ├── argouml.jar
+│ │ ├── argouml_commit_log.txt
+│ │ ├── argouml_trace.txt
+│ │ ├── argouml_semantic.csv
 │ ├── jhotdraw/
+│ │ ├── jhotdraw.jar
+│ │ ├── jhotdraw_commit_log.txt
+│ │ ├── jhotdraw_trace.txt
+│ │ ├── jhotdraw_semantic.csv
 │ ├── jedit/
+│ │ ├── jedit.jar
+│ │ ├── jedit_commit_log.txt
+│ │ ├── jedit_trace.txt
+│ │ ├── jedit_semantic.csv
 ├── src/
 │ ├── preprocessing/
 │ │ ├── extract_text.py
+│ │ ├── extract_structural_data.py
+│ │ ├── extract_logical_data.py
+│ │ ├── extract_dynamic_data.py
+│ │ ├── extract_all_data.py
 │ ├── metrics/
-│ │ ├── compute_lsi.py
-│ │ ├── compute_transformer.py
+│ │ ├── compute_lsi_similarity.py
+│ │ ├── compute_transformer_similarity.py
+│ │ ├── visualize_coupling.py
+│ ├── java_agent/
+│ │ ├── MANIFEST.MF
+│ │ ├── MethodCallLogger.java
+│ │ ├── MethodCallLogger.class
+│ │ ├── javassist.jar
 │ ├── notebooks/
 │ │ ├── compare_coupling.ipynb
 ├── requirements.txt
@@ -41,18 +63,23 @@ Investigate software coupling using modern DNN methods and compare with traditio
     pip install -r requirements.txt
     ```
 
-4. Run the preprocessing script:
+4. Extract data (semantic, structural, logical) using the interactive script:
     ```
-    python src/preprocessing/extract_text.py
+    python src/preprocessing/extract_all_data.py
     ```
 
 5. Compute coupling metrics:
     ```
-    python src/metrics/compute_lsi.py
-    python src/metrics/compute_transformer.py
+    python src/metrics/compute_lsi_similarity.py
+    python src/metrics/compute_transformer_similarity.py
     ```
 
-6. Open the Jupyter notebook for analysis:
+6. Visualize the coupling metrics:
+    ```
+    python src/metrics/visualize_coupling.py
+    ```
+
+7. Open the Jupyter notebook for further analysis:
     ```
     jupyter notebook src/notebooks/compare_coupling.ipynb
     ```
